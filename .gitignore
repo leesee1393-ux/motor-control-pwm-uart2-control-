@@ -1,0 +1,7 @@
+# Qt Creator / qmake build output
+build/
+*.pro.user
+*.pro.user.*
+*.o
+*.exe
+Makefile
