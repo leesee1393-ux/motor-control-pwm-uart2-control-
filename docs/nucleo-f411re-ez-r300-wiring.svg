@@ -35,8 +35,8 @@
   <text x="1200" y="585" class="sig">R300 OUT1 / OUT2</text>
 
   <rect x="700" y="710" width="450" height="110" rx="8" class="box"/>
-  <text x="745" y="755" class="title">USB-UART / Qt PC</text>
-  <text x="745" y="795" class="sig">TX↔PA3(RX), RX↔PA2(TX), GND↔GND</text>
+  <text x="745" y="755" class="title">ST-LINK USB(CN1) / Qt PC</text>
+  <text x="745" y="795" class="sig">보드 내부 VCP: PA2/PA3 ↔ ST-LINK MCU</text>
 
   <path d="M510 360 C590 360 630 370 720 370" class="wire"/>
   <path d="M510 430 C590 430 630 430 720 430" class="wire"/>

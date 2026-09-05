@@ -226,7 +226,7 @@ void MainWindow::setupUi()
 
 
     auto *subtitle =
-        new QLabel("STM32 · UART · L298N · PWM speed control",
+        new QLabel("STM32 · ST-LINK VCP · EZ R300 · PWM speed control",
                    central);
 
     subtitle->setObjectName("subtitleLabel");
