@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+  <style>
+    .box{fill:#fffef0;stroke:#222;stroke-width:3}.module{fill:#e8f4ff;stroke:#174a7e;stroke-width:3}.power{fill:#fff0f0;stroke:#9b2226;stroke-width:3}.wire{stroke:#16803c;stroke-width:4;fill:none}.gnd{stroke:#333;stroke-width:4;fill:none}.sig{font:24px Arial,sans-serif;fill:#111}.small{font:20px Arial,sans-serif;fill:#333}.title{font:bold 30px Arial,sans-serif;fill:#111}.pin{font:bold 23px Arial,sans-serif;fill:#0b5394}.note{font:20px Arial,sans-serif;fill:#7a1f1f}
+  </style>
+  <rect width="1500" height="900" fill="#fafafa"/>
+  <text x="50" y="55" class="title">NUCLEO-F411RE + EZ 모터 R300 배선 회로도</text>
+  <text x="50" y="88" class="small">코드 기준: 방향 제어 PA1/PA4, 속도 PWM PB0(TIM3_CH3), UART2 PA2/PA3</text>
+
+  <rect x="70" y="150" width="440" height="600" rx="8" class="box"/>
+  <text x="115" y="200" class="title">NUCLEO-F411RE</text>
+  <text x="115" y="235" class="small">Arduino 헤더 기준 GPIO 매핑</text>
+  <text x="120" y="300" class="pin">A0 / PA0</text><text x="340" y="300" class="sig">Push Button</text>
+  <text x="120" y="370" class="pin">A1 / PA1</text><text x="340" y="370" class="sig">R300 IN1</text>
+  <text x="120" y="440" class="pin">A2 / PA4</text><text x="340" y="440" class="sig">R300 IN2</text>
+  <text x="120" y="510" class="pin">A3 / PB0</text><text x="340" y="510" class="sig">R300 ENA PWM</text>
+  <text x="120" y="580" class="pin">D1 / PA2</text><text x="340" y="580" class="sig">USART2 TX</text>
+  <text x="120" y="650" class="pin">D0 / PA3</text><text x="340" y="650" class="sig">USART2 RX</text>
+  <text x="120" y="720" class="pin">GND</text><text x="340" y="720" class="sig">공통 GND</text>
+
+  <rect x="720" y="230" width="330" height="390" rx="8" class="module"/>
+  <text x="765" y="280" class="title">EZ 모터 R300</text>
+  <text x="765" y="315" class="small">모터 드라이버 모듈</text>
+  <text x="770" y="370" class="pin">IN1</text><text x="930" y="370" class="sig">방향 입력 1</text>
+  <text x="770" y="430" class="pin">IN2</text><text x="930" y="430" class="sig">방향 입력 2</text>
+  <text x="770" y="490" class="pin">ENA</text><text x="930" y="490" class="sig">PWM 속도 입력</text>
+  <text x="770" y="550" class="pin">OUT1/OUT2</text><text x="930" y="550" class="sig">DC 모터 출력</text>
+  <text x="770" y="595" class="pin">VM / GND</text><text x="930" y="595" class="sig">외부 전원</text>
+
+  <rect x="1160" y="230" width="260" height="150" rx="8" class="power"/>
+  <text x="1200" y="280" class="title">외부 모터 전원</text>
+  <text x="1200" y="325" class="sig">+VM → R300 VM</text>
+  <text x="1200" y="360" class="sig">GND → 공통 GND</text>
+  <rect x="1160" y="500" width="260" height="120" rx="8" class="box"/>
+  <text x="1210" y="545" class="title">DC 모터</text>
+  <text x="1200" y="585" class="sig">R300 OUT1 / OUT2</text>
+
+  <rect x="700" y="710" width="450" height="110" rx="8" class="box"/>
+  <text x="745" y="755" class="title">USB-UART / Qt PC</text>
+  <text x="745" y="795" class="sig">TX↔PA3(RX), RX↔PA2(TX), GND↔GND</text>
+
+  <path d="M510 360 C590 360 630 370 720 370" class="wire"/>
+  <path d="M510 430 C590 430 630 430 720 430" class="wire"/>
+  <path d="M510 500 C590 500 630 490 720 490" class="wire"/>
+  <path d="M1050 550 C1100 550 1110 560 1160 560" class="wire"/>
+  <path d="M1050 595 C1090 595 1110 350 1160 350" class="wire"/>
+  <path d="M510 720 C650 720 720 650 900 650 C1060 650 1080 360 1160 360" class="gnd"/>
+  <path d="M1050 595 C1100 595 1110 620 1160 620" class="gnd"/>
+  <path d="M510 580 C580 580 620 760 700 760" class="wire"/>
+  <path d="M510 650 C590 650 630 795 700 795" class="wire"/>
+  <text x="540" y="345" class="small">IN1</text><text x="540" y="415" class="small">IN2</text><text x="540" y="485" class="small">PWM</text>
+  <text x="560" y="705" class="note">모든 GND는 반드시 공통 연결</text>
+  <text x="70" y="850" class="note">주의: 모터 전원은 Nucleo 보드에서 직접 공급하지 말고 외부 전원을 사용하세요.</text>
+</svg>
