@@ -14,7 +14,7 @@ Qt Widgets application for controlling an STM32 motor through UART.
 
 ## Actual operation video
 
-[YouTube demonstration video](https://youtu.be/bXDWdd7FUCw)
+[YouTube demonstration video](https://www.youtube.com/watch?v=H0aGANyIsjI)
 
 ## Hardware wiring
 
